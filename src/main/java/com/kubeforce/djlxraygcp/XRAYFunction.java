@@ -1,4 +1,4 @@
-package com.kubeforce.djlxray;
+package com.kubeforce.djlxraygcp;
 
 import ai.djl.inference.Predictor;
 import ai.djl.modality.Classifications;
@@ -7,7 +7,6 @@ import ai.djl.modality.cv.ImageFactory;
 import ai.djl.modality.cv.translator.ImageClassificationTranslator;
 import ai.djl.modality.cv.util.NDImageUtils;
 import ai.djl.repository.zoo.Criteria;
-
 import ai.djl.repository.zoo.ZooModel;
 import ai.djl.translate.Translator;
 import lombok.SneakyThrows;
@@ -22,7 +21,7 @@ import java.util.function.Function;
 
 public class XRAYFunction implements Function<Map<String,String>, String> {
 
-    private static final Logger logger = LoggerFactory.getLogger(DjlxRayApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(XRAYFunction.class);
     private static final List<String> CLASSES = Arrays.asList("Normal", "Pneumonia");
     String imagePath;
     String savedModelPath;
